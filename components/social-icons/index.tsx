@@ -12,6 +12,7 @@ import {
   Xiaohongshu,
   Weibo,
   Wechat,
+  Bilibili,
 } from './icons'
 
 const components = {
@@ -28,6 +29,7 @@ const components = {
   xiaohongshu: Xiaohongshu,
   weibo: Weibo,
   wechat: Wechat,
+  bilibili: Bilibili,
 }
 
 type SocialIconProps = {
