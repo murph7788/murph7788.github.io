@@ -15,6 +15,10 @@ const siteMetadata = {
   github: 'https://github.com/murph7788',
   x: 'https://x.com/chronos_clear',
   twitter: 'https://x.com/chronos_clear',
+  weibo: 'https://weibo.com/u/7787064852',
+  xiaohongshu:
+    'https://www.xiaohongshu.com/user/profile/5b51725711be105fba24122e?xhsshare=CopyLink&appuid=5b51725711be105fba24122e&apptime=1726386490',
+  wechat: '/static/images/gongzhonghao.webp',
   facebook: '',
   youtube: 'https://www.youtube.com/@chronos_clear',
   linkedin: '',

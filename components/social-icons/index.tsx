@@ -9,6 +9,9 @@ import {
   Mastodon,
   Threads,
   Instagram,
+  Xiaohongshu,
+  Weibo,
+  Wechat,
 } from './icons'
 
 const components = {
@@ -22,6 +25,9 @@ const components = {
   mastodon: Mastodon,
   threads: Threads,
   instagram: Instagram,
+  xiaohongshu: Xiaohongshu,
+  weibo: Weibo,
+  wechat: Wechat,
 }
 
 type SocialIconProps = {
