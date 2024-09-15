@@ -14,7 +14,7 @@ const siteMetadata = {
   email: '',
   github: 'https://github.com/murph7788',
   x: 'https://x.com/chronos_clear',
-  // twitter: 'https://twitter.com/Twitter',
+  twitter: 'https://x.com/chronos_clear',
   facebook: '',
   youtube: 'https://www.youtube.com/@chronos_clear',
   linkedin: '',
