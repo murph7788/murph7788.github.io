@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 import type { Authors } from 'contentlayer/generated'
 import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
+import siteMetadata from '@/data/siteMetadata'
 
 interface Props {
   children: ReactNode
@@ -46,13 +47,14 @@ export default function AuthorLayout({ children, content }: Props) {
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
             <div className="flex space-x-3 pt-6">
-              <SocialIcon kind="mail" href={`mailto:${email}`} />
-              <SocialIcon kind="github" href={github} />
-              <SocialIcon kind="linkedin" href={linkedin} />
-              <SocialIcon kind="x" href={twitter} />
-              <SocialIcon kind="weibo" href={weibo} />
-              <SocialIcon kind="wechat" href={wechat} />
-              <SocialIcon kind="xiaohongshu" href={xiaohongshu} />
+              <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
+              <SocialIcon kind="github" href={siteMetadata.github} />
+              <SocialIcon kind="linkedin" href={siteMetadata.linkedin} />
+              <SocialIcon kind="twitter" href={siteMetadata.twitter} />
+              <SocialIcon kind="weibo" href={siteMetadata.weibo} />
+              <SocialIcon kind="bilibili" href={siteMetadata.bilibili} />
+              <SocialIcon kind="wechat" href={siteMetadata.wechat} />
+              <SocialIcon kind="xiaohongshu" href={siteMetadata.xiaohongshu} />
             </div>
           </div>
           <div className="prose max-w-none pb-8 pt-8 dark:prose-invert xl:col-span-2">
