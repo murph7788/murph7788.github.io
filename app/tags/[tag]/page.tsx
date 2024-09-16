@@ -40,14 +40,14 @@ export const generateStaticParams = async () => {
   const tagCounts = tagData as Record<string, number>
   const tagKeys = Object.keys(tagCounts)
   const paths = tagKeys.map((tag) => ({
-    tag: encodeURI(tag)
+    tag: decodeURI(tag)
   }))
 
   return paths
 }
 
 export default function TagPage({ params }: { params: { tag: string } }) {
-  const tag = decodeURI(decodeURI(params.tag)) // 不知道为什么build的时候被encode了两次，所以只能decode两次了
+  const tag = decodeURI(params.tag) // 不知道为什么build的时候被encode了两次，所以只能decode两次了
   // Capitalize first letter and convert space to dash
   const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
   const filteredPosts = allCoreContent(
