@@ -3,6 +3,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
+import SocialIcon from '@/components/social-icons'
 
 const MAX_DISPLAY = 5
 
@@ -17,6 +18,34 @@ export default function Home({ posts }) {
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
           </p>
+
+          <div className="mt-0 flex flex-col items-center">
+            {/* <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
+                Tailwind Nextjs Theme
+            </div> */}
+            <div className="mb-3 flex space-x-4">
+              <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
+              <SocialIcon kind="github" href={siteMetadata.github} size={6} />
+              <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} />
+              <SocialIcon kind="youtube" href={siteMetadata.youtube} size={6} />
+              <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={6} />
+              <SocialIcon kind="twitter" href={siteMetadata.twitter} size={6} />
+              <SocialIcon kind="instagram" href={siteMetadata.instagram} size={6} />
+              <SocialIcon kind="threads" href={siteMetadata.threads} size={6} />
+              <SocialIcon kind="weibo" href={siteMetadata.weibo} size={6} />
+              <SocialIcon kind="bilibili" href={siteMetadata.bilibili} size={6} />
+              <SocialIcon kind="wechat" href={siteMetadata.wechat} size={6} />
+              <SocialIcon kind="xiaohongshu" href={siteMetadata.xiaohongshu} size={6} />
+            </div>
+            {/* <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+              <div>{siteMetadata.author}</div>
+              <div>{` • `}</div>
+              <div>{`© ${new Date().getFullYear()}`}</div>
+              <div>{` • `}</div>
+              <Link href="/">{siteMetadata.title}</Link>
+            </div> */}
+          </div>
+
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
