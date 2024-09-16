@@ -28,21 +28,19 @@ export const generateStaticParams = async () => {
   const paths = tagKeys.map((tag) => ({
     tag: encodeURI(tag),
   }))
+
   return paths
 }
 
 export default function TagPage({ params }: { params: { tag: string } }) {
-  // const tag = decodeURI(params.tag)
-  const tag = params.tag
-  console.log(tag)
+  const tag = decodeURI(decodeURI(params.tag)) // 不知道为什么build的时候被encode了两次，所以只能decode两次了
+  // console.log('原始tag',params.tag, '解码tag', decodeURI(decodeURI(params.tag)));
   // Capitalize first letter and convert space to dash
   const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
   const filteredPosts = allCoreContent(
-    // sortPosts(allBlogs.filter((post) => post.tags && post.tags.map((t) => slug(t)).includes(tag)))
-    sortPosts(allBlogs.filter((post) => post.tags && post.tags.includes(tag)))
+    sortPosts(allBlogs.filter((post) => post.tags && post.tags.map((t) => slug(t)).includes(tag)))
   )
 
-  console.log(allBlogs[0].tags)
   if (filteredPosts.length === 0) {
     return notFound()
   }
